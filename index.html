@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nader Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+
+    <!-- Dark Mode Toggle -->
+    <script src="./Js/main.app.js"></script>
+  </head>
+  <body
+    class="bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-300"
+  >
+    <!-- Header -->
+    <header
+      class="w-full shadow-md fixed top-0 left-0 bg-white dark:bg-gray-900 z-50"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="text-xl font-bold text-indigo-600 dark:text-indigo-400">
+          Nader Portfolio
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-6 font-medium">
+          <a href="/" class="hover:text-indigo-500">Home</a>
+          <a href="#services" class="hover:text-indigo-500">Services</a>
+          <a href="#skills" class="hover:text-indigo-500">Skills</a>
+          <a href="#projects" class="hover:text-indigo-500">Projects</a>
+          <a href="#about" class="hover:text-indigo-500">About</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-4 md:ml-6">
+          <button
+            onclick="toggleTheme()"
+            class="p-2 rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600"
+          >
+            🌙
+          </button>
+          <button
+            onclick="toggleMobileMenu()"
+            class="md:hidden p-2 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+        <ul class="space-y-2 text-base font-medium">
+          <li><a href="#home" class="block hover:text-indigo-500">Home</a></li>
+          <li>
+            <a href="#services" class="block hover:text-indigo-500">Services</a>
+          </li>
+          <li>
+            <a href="#skills" class="block hover:text-indigo-500">Skills</a>
+          </li>
+          <li>
+            <a href="#projects" class="block hover:text-indigo-500">Projects</a>
+          </li>
+          <li>
+            <a href="#about" class="block hover:text-indigo-500">About</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="pt-24 min-h-screen flex items-center justify-center px-6 bg-gradient-to-b from-white to-gray-100 dark:from-gray-700 dark:bg-gray-900"
+    >
+      <div class="max-w-7xl w-full grid md:grid-cols-2 gap-10 items-center">
+        <!-- Text -->
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+            Hi, I'm
+            <span class="text-indigo-600 dark:text-indigo-400">Nader</span
+            ><br />A Web Developer
+          </h1>
+          <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+            I build fast, responsive, and modern web applications using React,
+            Next.js, and Tailwind CSS.
+          </p>
+          <div class="space-x-4">
+            <a
+              href="#projects"
+              class="px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition"
+              >View Projects</a
+            >
+            <a
+              href="#footer"
+              class="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-xl hover:bg-indigo-50 transition"
+              >Call Me</a
+            >
+          </div>
+        </div>
+        <!-- Image -->
+        <div class="flex justify-center">
+          <img
+            src="./Image/imgOne.jpg"
+            alt="Developer"
+            class="rounded-full shadow-lg max-w-full h-auto"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-6 bg-gray-50 dark:bg-gray-800">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2
+          class="text-4xl font-bold mb-12 text-indigo-600 dark:text-indigo-400"
+        >
+          Services
+        </h2>
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          <div
+            class="p-6 rounded-xl shadow-md border bg-white dark:bg-gray-900"
+          >
+            <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Responsive websites using React, Next.js, Tailwind.
+            </p>
+          </div>
+          <div
+            class="p-6 rounded-xl shadow-md border bg-white dark:bg-gray-900"
+          >
+            <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Clean and modern interfaces with great UX.
+            </p>
+          </div>
+          <div
+            class="p-6 rounded-xl shadow-md border bg-white dark:bg-gray-900"
+          >
+            <h3 class="text-xl font-semibold mb-2">API Integration</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              RESTful APIs and full-stack web functionality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section
+      id="skills"
+      class="min-h-screen flex items-center justify-center px-6 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white"
+    >
+      <div class="mx-auto">
+        <h2
+          class="text-4xl font-bold text-indigo-600 dark:text-indigo-400 text-center mb-12"
+        >
+          My Skills
+        </h2>
+
+        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <!-- Skill Card with Logo -->
+          <div
+            class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform text-center flex flex-col items-center justify-center"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              alt="HTML"
+              class="w-12 h-12 mx-auto mb-4"
+            />
+            <p>HTML</p>
+          </div>
+
+          <div
+            class="bg-gray-100 dark:bg-gray-800 p-7 rounded-xl shadow hover:scale-105 transition-transform text-center"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+              alt="CSS"
+              class="w-12 h-12 mx-auto mb-4"
+            />
+            <p>CSS / Tailwind CSS</p>
+          </div>
+
+          <div
+            class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform text-center"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript"
+              class="w-12 h-12 mx-auto mb-2"
+            />
+            <p>JavaScript</p>
+          </div>
+
+          <div
+            class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform text-center"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              alt="React"
+              class="w-12 h-12 mx-auto mb-2"
+            />
+            <p>React.js</p>
+          </div>
+
+          <div
+            class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform text-center"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg"
+              alt="Next.js"
+              class="w-12 h-12 mx-auto mb-2 invert dark:invert-0"
+            />
+            <p>Next.js</p>
+          </div>
+
+          <div
+            class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform text-center"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+              alt="Node.js"
+              class="w-12 h-12 mx-auto mb-2"
+            />
+            <p>Node.js</p>
+          </div>
+
+          <div
+            class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform text-center"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+              alt="Express.js"
+              class="w-12 h-12 mx-auto mb-2 invert dark:invert-0"
+            />
+            <p>Express.js</p>
+          </div>
+
+          <div
+            class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform text-center"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+              alt="MongoDB"
+              class="w-12 h-12 mx-auto mb-2"
+            />
+            <p>MongoDB</p>
+          </div>
+
+          <div
+            class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform text-center"
+          >
+            <img
+              src="https://img.icons8.com/color/48/api.png"
+              alt="API"
+              class="w-12 h-12 mx-auto mb-2"
+            />
+            <p>RESTful APIs</p>
+          </div>
+
+          <div
+            class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform text-center"
+          >
+            <img
+              src="https://img.icons8.com/ios-filled/50/lock--v1.png"
+              alt="Authentication"
+              class="w-12 h-12 mx-auto mb-2"
+            />
+            <p>Authentication</p>
+          </div>
+
+          <div
+            class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform text-center"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+              alt="Git"
+              class="w-12 h-12 mx-auto mb-2"
+            />
+            <p>Git & GitHub</p>
+          </div>
+
+          <div
+            class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform text-center"
+          >
+            <img
+              src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png"
+              alt="Postman"
+              class="w-12 h-12 mx-auto mb-2"
+            />
+            <p>Postman</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section
+      id="projects"
+      class="py-16 px-6 bg-white text-gray-800 dark:text-white dark:bg-gray-800"
+    >
+      <div class="max-w-6xl mx-auto text-center">
+        <h2
+          class="text-4xl font-bold mb-12 text-indigo-600 dark:text-indigo-400"
+        >
+          Projects
+        </h2>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Example Project -->
+          <div
+            class="rounded-xl shadow-md border bg-white dark:bg-gray-700 overflow-hidden"
+          >
+            <img src="" alt="Project One" class="w-full" />
+            <div class="p-4 text-left">
+              <h3 class="text-xl font-semibold mb-2">Project One</h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                Built with React, Tailwind, and Next.js.
+              </p>
+              <a
+                href="#"
+                class="inline-block mt-4 px-4 py-2 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition"
+                >View</a
+              >
+            </div>
+          </div>
+          <!-- You can add more projects here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section-->
+    <section
+      id="about"
+      class="py-20 px-6 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white"
+    >
+      <div class="mx-auto h-auto">
+        <h2
+          class="text-4xl font-bold text-indigo-600 dark:text-indigo-400 text-center mb-12"
+        >
+          About Me
+        </h2>
+
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <p class="text-lg leading-relaxed mb-8">
+            👋 My name is
+            <span class="font-semibold text-indigo-600 dark:text-indigo-400"
+              >Nader Sayed</span
+            >.
+          </p>
+          <p class="text-lg leading-relaxed mb-8">
+            📅 I’m <span class="font-semibold">19 years old</span>.
+          </p>
+          <p class="text-lg leading-relaxed mb-8">
+            💻 I’m a
+            <span class="font-semibold text-indigo-600 dark:text-indigo-400"
+              >Fullstack Web Developer</span
+            >.
+          </p>
+          <p class="text-lg leading-relaxed mb-8">
+            🚫 I don’t have experience yet, but I’m learning and building
+            real-world projects.
+          </p>
+          <p class="text-lg leading-relaxed">
+            🌍 I’m passionate about building modern, responsive websites using
+            technologies like
+            <span class="font-semibold"
+              >HTML, CSS, JavaScript, React, Next.js, and Node.js</span
+            >.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-white text-gray-800 dark:text-white py-8 dark:bg-gray-800"
+      id="footer"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col gap-6 md:flex-row md:justify-between md:items-center"
+      >
+        <!-- Contact Info -->
+        <div class="space-y-2">
+          <div class="flex items-center gap-2">
+            
+            <span>+20 1142601520</span>
+          </div>
+          <div class="flex items-center gap-2">
+           
+            </svg>
+            <span>engnader@email.com</span>
+          </div>
+          <div class="flex items-center gap-2">
+           
+            <span>Cairo, Egypt</span>
+          </div>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="flex space-x-4">
+          <a
+            href="https://github.com/nadersayd132"
+            target="_blank"
+            aria-label="GitHub"
+            class="hover:text-indigo-500 transition-colors"
+          >
+            <!-- GitHub Icon -->
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.3.8-.6v-2.3c-3.2.7-3.8-1.5-3.8-1.5-.6-1.5-1.3-1.9-1.3-1.9-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.3 1.8 1.3 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.2 1.9-.4 2.9-.4s2 .1 2.9.4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.2 0 4.6-2.7 5.6-5.3 5.9.4.3.8.9.8 1.8v2.6c0 .3.2.7.8.6C20.7 21.4 24 17.1 24 12c0-6.3-5.2-11.5-12-11.5z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://linkedin.com/"
+            target="_blank"
+            aria-label="LinkedIn"
+            class="hover:text-indigo-500 transition-colors"
+          >
+            <!-- LinkedIn Icon -->
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.7v2.2h.1c.7-1.3 2.3-2.7 4.7-2.7 5 0 5.9 3.3 5.9 7.6V24h-5V15.5c0-2-.1-4.5-2.7-4.5s-3.1 2.1-3.1 4.3V24h-5V8z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://www.instagram.com/nader_sayed9/"
+            target="_blank"
+            aria-label="Instagram"
+            class="hover:text-indigo-500 transition-colors"
+          >
+            <!-- Instagram Icon -->
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.3 2.4.5.6.2 1 .5 1.4.9s.7.8.9 1.4c.2.5.4 1.2.5 2.4.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.9-.5 2.4-.2.6-.5 1-.9 1.4s-.8.7-1.4.9c-.5.2-1.2.4-2.4.5-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.3-2.4-.5-.6-.2-1-.5-1.4-.9s-.7-.8-.9-1.4c-.2-.5-.4-1.2-.5-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.3-1.9.5-2.4.2-.6.5-1 .9-1.4s.8-.7 1.4-.9c.5-.2 1.2-.4 2.4-.5 1.2-.1 1.6-.1 4.8-.1m0-2.2C8.7 0 8.3 0 7 .1 5.7.2 4.7.5 3.9.9 3 .3 2.3.7 1.7 1.3 1.1 1.9.7 2.7.3 3.6.1 4.4 0 5.4 0 7.8v8.4c0 2.4.1 3.4.3 4.2.4.9.8 1.7 1.4 2.3.6.6 1.4 1.1 2.3 1.4.8.2 1.8.3 4.2.3s3.4-.1 4.2-.3c.9-.4 1.7-.8 2.3-1.4.6-.6 1.1-1.4 1.4-2.3.2-.8.3-1.8.3-4.2V7.8c0-2.4-.1-3.4-.3-4.2-.4-.9-.8-1.7-1.4-2.3C19.4.7 18.6.3 17.7.1 16.9 0 15.9 0 13.5 0h-3z"
+              />
+              <circle cx="12" cy="12" r="3.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
+        &copy; 2025 Nader Sayed. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
